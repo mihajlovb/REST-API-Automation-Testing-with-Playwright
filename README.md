@@ -62,7 +62,13 @@ Playwright HTML report is generated after test execution and can be viewed with:
 ```bash
 npx playwright show-report
 ```
+Or view the latest test report online:
+https://mihajlovb.github.io/REST-API-Automation-Testing-with-Playwright/
 
+The report is automatically updated after each successful GitHub Actions run.
+
+## CI
+Automated API tests are executed using GitHub Actions on every push to the master branch.
 
 # Notes
 The tested API is a mock/demo API. Some endpoints return non-standard HTTP status codes.
