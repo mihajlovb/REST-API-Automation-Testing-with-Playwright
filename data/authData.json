@@ -1,0 +1,14 @@
+{
+  "validLogin": {
+    "username": "mor_2314",
+    "password": "83r5^_"
+  },
+  "invalidLogin": {
+    "username": "mor_2314",
+    "password": "wrongpassword"
+  },
+  "emptyLogin": {
+    "username": "",
+    "password": ""
+  }
+}

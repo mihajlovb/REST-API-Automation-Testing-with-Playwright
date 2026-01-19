@@ -1,0 +1,89 @@
+{
+  "validUser": {
+    "email": "testuser@test.com",
+    "username": "testuser123",
+    "password": "password123",
+    "name": {
+      "firstname": "Test",
+      "lastname": "User"
+    },
+    "address": {
+      "city": "Skopje",
+      "street": "Main Street",
+      "number": 1,
+      "zipcode": "1000",
+      "geolocation": {
+        "lat": "41.9981",
+        "long": "21.4254"
+      }
+    },
+    "phone": "070123456"
+  },
+
+  "validUser2": {
+    "email": "jana.petrov@test.com",
+    "username": "janapetrov",
+    "password": "janaPass123",
+    "name": {
+      "firstname": "Jana",
+      "lastname": "Petrova"
+    },
+    "address": {
+      "city": "Bitola",
+      "street": "Shirok Sokak",
+      "number": 15,
+      "zipcode": "7000",
+      "geolocation": {
+        "lat": "41.0314",
+        "long": "21.3347"
+      }
+    },
+    "phone": "071987654"
+  },
+
+  "validUser3": {
+    "email": "marko.stefanov@test.com",
+    "username": "markos",
+    "password": "markoSecure1",
+    "name": {
+      "firstname": "Marko",
+      "lastname": "Stefanov"
+    },
+    "address": {
+      "city": "Ohrid",
+      "street": "Kej Makedonija",
+      "number": 8,
+      "zipcode": "6000",
+      "geolocation": {
+        "lat": "41.1231",
+        "long": "20.8016"
+      }
+    },
+    "phone": "072555333"
+  },
+
+  "validUser4": {
+    "email": "matej.m@test.com",
+    "username": "matej_m",
+    "password": "matejSecure1",
+    "name": {
+      "firstname": "Matej",
+      "lastname": "M"
+    },
+    "address": {
+      "city": "Kratovo",
+      "street": "Goce Delcev",
+      "number": 22,
+      "zipcode": "1360",
+      "geolocation": {
+        "lat": "41.7458",
+        "long": "22.1953"
+      }
+    },
+    "phone": "075423222"
+  },
+
+  "invalidUser": {
+    "username": "invaliduser"
+  }
+}

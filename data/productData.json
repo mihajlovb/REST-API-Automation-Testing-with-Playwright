@@ -1,0 +1,12 @@
+{
+    "validProdutct":{
+        "title": "Test Product",
+        "price": 19.99,
+        "description": "Automation test product",
+        "image": "https://i.pravatar.cc",
+        "category": "electronics"
+    },
+    "invalidProduct":{
+        "price": 10.5
+    }
+}
