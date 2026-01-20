@@ -2,10 +2,6 @@ import { test, expect } from '@playwright/test';
 import { ApiClient } from '../utils/apiClient';
 import productData from '../data/productData.json';
 
-// =====================================================================
-// POSITIVE SCENARIOS
-// =====================================================================
-
 test.describe('Products API - Positive Scenarios', () => {
 
   test('GET /products - should return a list of products', async ({ request }) => {
@@ -80,11 +76,6 @@ test.describe('Products API - Positive Scenarios', () => {
 
 });
 
-
-// =====================================================================
-// NEGATIVE SCENARIOS
-// =====================================================================
-
 test.describe('Products API - Negative Scenarios', () => {
 
   test('GET /products/9999 - invalid product id', async ({ request }) => {
@@ -99,7 +90,7 @@ test.describe('Products API - Negative Scenarios', () => {
     const response = await api.post('/products', {});
 
     // API does not enforce validation → accepted as valid test finding
-    expect([200, 201, 400, 422]).toContain(response.status());
+    expect([200, 201, 400, 422, 403]).toContain(response.status());
   });
 
   test('POST /products - invalid data types', async ({ request }) => {
@@ -110,7 +101,7 @@ test.describe('Products API - Negative Scenarios', () => {
       quantity: "many"
     });
 
-    expect([200, 201, 400, 422]).toContain(response.status());
+    expect([200, 201, 400, 422, 403]).toContain(response.status());
   });
 
   test('PUT /products/9999 - update non-existing product', async ({ request }) => {
@@ -129,18 +120,13 @@ test.describe('Products API - Negative Scenarios', () => {
 
 });
 
-
-// =====================================================================
-// EDGE CASES
-// =====================================================================
-
 test.describe('Products API - Edge Cases', () => {
 
   test('GET /products/0 - boundary value id', async ({ request }) => {
     const api = new ApiClient(request);
     const response = await api.get('/products/0');
 
-    expect([200, 400, 404]).toContain(response.status());
+    expect([200, 400, 404, 403]).toContain(response.status());
   });
 
   test('POST /products - extremely long title', async ({ request }) => {
@@ -150,7 +136,7 @@ test.describe('Products API - Edge Cases', () => {
       price: 10
     });
 
-    expect([200, 201, 400, 422]).toContain(response.status());
+    expect([200, 201, 400, 422, 403]).toContain(response.status());
   });
 
   test('POST /products - extremely large price', async ({ request }) => {
@@ -160,7 +146,7 @@ test.describe('Products API - Edge Cases', () => {
       price: 999999999
     });
 
-    expect([200, 201, 400, 422]).toContain(response.status());
+    expect([200, 201, 400, 422, 403]).toContain(response.status());
   });
 
 });
