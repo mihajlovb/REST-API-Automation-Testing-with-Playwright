@@ -76,6 +76,8 @@ test.describe('Products API - Positive Scenarios', () => {
 
 });
 
+// ---------------------------------------------------------------------
+
 test.describe('Products API - Negative Scenarios', () => {
 
   test('GET /products/9999 - invalid product id', async ({ request }) => {
@@ -89,7 +91,6 @@ test.describe('Products API - Negative Scenarios', () => {
     const api = new ApiClient(request);
     const response = await api.post('/products', {});
 
-    // API does not enforce validation → accepted as valid test finding
     expect([200, 201, 400, 422, 403]).toContain(response.status());
   });
 
@@ -119,6 +120,8 @@ test.describe('Products API - Negative Scenarios', () => {
   });
 
 });
+
+// ---------------------------------------------------------------------
 
 test.describe('Products API - Edge Cases', () => {
 
