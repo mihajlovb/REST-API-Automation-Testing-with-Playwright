@@ -70,6 +70,30 @@ The report is automatically updated after each successful GitHub Actions run.
 ## CI
 Automated API tests are executed using GitHub Actions on every push to the master branch.
 
+## Performance Testing — Apache JMeter
+
+Performance testing is implemented using **Apache JMeter** to evaluate system behavior under load.
+
+### Objectives
+
+- Measure response time
+- Analyze throughput
+- Detect performance bottlenecks
+- Validate system stability
+
+### Tested Endpoints
+
+- `POST /auth/login`
+- `GET /products`
+- `POST /products`
+
+### Test Scenarios
+
+- Concurrent virtual users
+- Ramp-up load execution
+- Response validation
+
+
 # Notes
 The tested API is a mock/demo API. Some endpoints return non-standard HTTP status codes.
 Test assertions were adapted accordingly.
